@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_graphql_resolver_mapping">
+    <sys_graphql_resolver_mapping action="INSERT_OR_UPDATE">
+        <path>Query:incidents</path>
+        <resolver display_value="incidents">4c65da332bfb1a5068ebf5236e91bff4</resolver>
+        <schema display_value="Sample API">c53392bf2bbb1a5068ebf5236e91bfb8</schema>
+        <sys_class_name>sys_graphql_resolver_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-25 13:06:25</sys_created_on>
+        <sys_id>92d516732bfb1a5068ebf5236e91bf7a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GraphQL Sample" source="x_snc_tt_gql_smpl">cf62127f2bbb1a5068ebf5236e91bf10</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GraphQL Sample">cf62127f2bbb1a5068ebf5236e91bf10</sys_scope>
+        <sys_update_name>sys_graphql_resolver_mapping_92d516732bfb1a5068ebf5236e91bf7a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-25 13:06:25</sys_updated_on>
+    </sys_graphql_resolver_mapping>
+</record_update>

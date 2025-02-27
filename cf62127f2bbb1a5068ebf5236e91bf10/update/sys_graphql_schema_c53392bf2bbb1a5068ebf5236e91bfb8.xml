@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_graphql_schema">
+    <sys_graphql_schema action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application_namespace>xSncTtGqlSmpl</application_namespace>
+        <contextual_acl_max_depth>3</contextual_acl_max_depth>
+        <enforce_acl/>
+        <name>Sample API</name>
+        <namespace>sample</namespace>
+        <paths>CTA:label,CTA:url,GlideElement:displayValue,GlideElement:value,Incident:assignedTo,Incident:caller,Incident:shortDescription,Incident:state,Incident:sysId,Mutation:updateIncident,Page:heading,Page:sections,Query:abTest,Query:incidents,Section:bodyText,Section:callToAction,Section:heading,Section:imageUrl,UpdateResult:message,UpdateResult:result,User:email,User:name,User:sysId</paths>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>false</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <schema>schema {&#13;
+    query: Query&#13;
+    mutation: Mutation&#13;
+}&#13;
+&#13;
+type Query {&#13;
+	abTest: Page&#13;
+    incidents(encodedQuery:String): [Incident]&#13;
+	&#13;
+}&#13;
+&#13;
+type Mutation {&#13;
+    updateIncident(id: String, encodedQuery: String): UpdateResult!&#13;
+}&#13;
+&#13;
+&#13;
+type Page {&#13;
+	heading: String&#13;
+	sections: [Section]&#13;
+}&#13;
+&#13;
+type Section {&#13;
+	heading: String&#13;
+	imageUrl: String&#13;
+	bodyText: String&#13;
+	callToAction: CTA&#13;
+}&#13;
+&#13;
+type CTA {&#13;
+	label: String&#13;
+	url: String&#13;
+}&#13;
+&#13;
+type Incident {&#13;
+	sysId: GlideElement @source(value: "sys_id")&#13;
+	shortDescription: GlideElement @source(value: "short_description")&#13;
+	state: GlideElement @source(value: "state")&#13;
+	caller: User @source(value: "caller_id.value")&#13;
+	assignedTo: User @source(value: "assigned_to.value")&#13;
+}&#13;
+&#13;
+type User {&#13;
+	sysId: GlideElement @source(value: "sys_id")&#13;
+	name: GlideElement @source(value: "name")&#13;
+	email: GlideElement @source(value: "email")&#13;
+}&#13;
+&#13;
+type GlideElement {&#13;
+	value: String @source(value: "value")&#13;
+	displayValue: String @source(value: "display_value")&#13;
+}&#13;
+&#13;
+type UpdateResult {&#13;
+	result: String!&#13;
+	message: String&#13;
+}</schema>
+        <sys_class_name>sys_graphql_schema</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-25 13:03:38</sys_created_on>
+        <sys_id>c53392bf2bbb1a5068ebf5236e91bfb8</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Sample API</sys_name>
+        <sys_package display_value="GraphQL Sample" source="x_snc_tt_gql_smpl">cf62127f2bbb1a5068ebf5236e91bf10</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GraphQL Sample">cf62127f2bbb1a5068ebf5236e91bf10</sys_scope>
+        <sys_update_name>sys_graphql_schema_c53392bf2bbb1a5068ebf5236e91bfb8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 19:27:34</sys_updated_on>
+        <type_names/>
+    </sys_graphql_schema>
+</record_update>

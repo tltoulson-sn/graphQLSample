@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_graphql_resolver">
+    <sys_graphql_resolver action="INSERT_OR_UPDATE">
+        <name>incidents</name>
+        <schema display_value="Sample API">c53392bf2bbb1a5068ebf5236e91bfb8</schema>
+        <script><![CDATA[(function process(/*ResolverEnvironment*/ env) {
+
+    let encodedQuery = env.getArguments().encodedQuery;
+	
+    let incidents = new GlideRecordSecure('incident');
+    incidents.addEncodedQuery(encodedQuery);
+    incidents.query();
+
+    return incidents;
+
+
+})(env);]]></script>
+        <sys_class_name>sys_graphql_resolver</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-25 13:05:56</sys_created_on>
+        <sys_id>4c65da332bfb1a5068ebf5236e91bff4</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>incidents</sys_name>
+        <sys_package display_value="GraphQL Sample" source="x_snc_tt_gql_smpl">cf62127f2bbb1a5068ebf5236e91bf10</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GraphQL Sample">cf62127f2bbb1a5068ebf5236e91bf10</sys_scope>
+        <sys_update_name>sys_graphql_resolver_4c65da332bfb1a5068ebf5236e91bff4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 15:46:40</sys_updated_on>
+    </sys_graphql_resolver>
+</record_update>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_graphql_resolver">
+    <sys_graphql_resolver action="INSERT_OR_UPDATE">
+        <name>getPage</name>
+        <schema display_value="Sample API">c53392bf2bbb1a5068ebf5236e91bfb8</schema>
+        <script><![CDATA[(function process(/*ResolverEnvironment*/ env) {
+
+    let pages = [
+		{
+			heading: 'Heading 1',
+			sections: [
+				{
+					heading: 'Section 1',
+					imageUrl: 'Some URL 1',
+					bodyText: 'Yep, thats a body text',
+					callToAction: {
+						label: 'Click Me',
+						url: 'Goes nowhere'
+					}
+				},
+				{
+					heading: 'Section 2',
+					imageUrl: 'Some URL 2',
+					bodyText: 'Yep, thats a body text',
+					callToAction: {
+						label: 'Click Me',
+						url: 'Goes nowhere'
+					}
+				},
+				{
+					heading: 'Section 3',
+					imageUrl: 'Some URL 3',
+					bodyText: 'Yep, thats a body text',
+					callToAction: {
+						label: 'Click Me',
+						url: 'Goes nowhere'
+					}
+				},
+			]
+		},
+		{
+			heading: 'Heading 2',
+			sections: [
+				{
+					heading: 'Section 1',
+					imageUrl: 'Some URL 1',
+					bodyText: 'Yep, thats a body text',
+					callToAction: {
+						label: 'Click Me',
+						url: 'Goes nowhere'
+					}
+				},
+			]
+		}
+	];
+
+    let randomNumber = Math.floor(Math.random() * 2);
+    return pages[randomNumber];
+
+})(env);]]></script>
+        <sys_class_name>sys_graphql_resolver</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 19:32:43</sys_created_on>
+        <sys_id>c7e6f4d4c3ccaa50fe81baddd4013193</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>getPage</sys_name>
+        <sys_package display_value="GraphQL Sample" source="x_snc_tt_gql_smpl">cf62127f2bbb1a5068ebf5236e91bf10</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GraphQL Sample">cf62127f2bbb1a5068ebf5236e91bf10</sys_scope>
+        <sys_update_name>sys_graphql_resolver_c7e6f4d4c3ccaa50fe81baddd4013193</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 19:32:43</sys_updated_on>
+    </sys_graphql_resolver>
+</record_update>
